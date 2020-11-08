@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Doughnut Chart </title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<h1><b><u> SAT Math Scores(2012)</u></b></h1>
+<canvas id="doughnut-chart-grouped" width="800" height="350"></canvas>
+<canvas id="bar-chart-horizontal" width="800" height="200"></canvas>
+<script src="chart.js@2.8.0"></script>
+<script>
+new Chart(document.getElementById("doughnut-chart-grouped"), {
+	type: 'doughnut',
+	data: {
+		labels: ["HENRY STREET SCHOOL FOR INTERNATIONAL STUDIES", "UNIVERSITY NEIGHBORHOOD HIGH SCHOOL",
+			"EAST SIDE COMMUNITY SCHOOL", "FORSYTH SATELLITE ACADEMY",
+			"MARTA VALLE HIGH SCHOOL", "LOWER EAST SIDE PREPARATORY HIGH SCHOOL",
+			"NEW EXPLORATIONS INTO SCIENCE, TECHNOLOGY AND MATH HIGH SCHOOL", "CASCADES HIGH SCHOOL",
+			"BARD HIGH SCHOOL EARLY COLLEGE", "FOOD AND FINANCE HIGH SCHOOL"],
+		datasets: [
+			{
+				label: "English",
+				backgroundColor: ["#F3A9DC", "#D4E6F1", "#ABEBC6", "#FD9391", "#FCF3CF", "#A6C9FB", "#D2B4DE", "#F9AA99", "#D6DBDF", "99F9E8"],
+				data: [404, 423, 402, 401, 433, 457, 398, 418, 386, 401]
+			}
+		]
+	},
+    options: {
+      title: {
+        display: true,
+        text: 'Donut-Chart Average Math SAT scores (2012)'
+      }
+    }
+});
+new Chart(document.getElementById("bar-chart-horizontal"), {
+    type: 'horizontalBar',
+    data: {
+      labels: ["HENRY STREET SCHOOL FOR INTERNATIONAL STUDIES", "UNIVERSITY NEIGHBORHOOD HIGH SCHOOL",
+			"EAST SIDE COMMUNITY SCHOOL", "FORSYTH SATELLITE ACADEMY",
+			"MARTA VALLE HIGH SCHOOL", "LOWER EAST SIDE PREPARATORY HIGH SCHOOL",
+			"NEW EXPLORATIONS INTO SCIENCE, TECHNOLOGY AND MATH HIGH SCHOOL", "CASCADES HIGH SCHOOL",
+			"BARD HIGH SCHOOL EARLY COLLEGE", "FOOD AND FINANCE HIGH SCHOOL"],
+      datasets: [
+        {
+          label: "English",
+          backgroundColor: ["#F3A9DC", "#D4E6F1", "#ABEBC6", "#FD9391", "#FCF3CF", "#A6C9FB", "#D2B4DE", "#F9AA99", "#D6DBDF", "99F9E8"],
+          data: [404, 423, 402, 401, 433, 457, 398, 418, 386, 401]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Horizontal-Chart Average Math SAT scores (2012)'
+      }
+    }
+});
+</script>
+</body>
+<button onclick="document.location = 'http://acc6.its.brooklyn.cuny.edu/~czheng/index.html'">Back</button>
+</html>
